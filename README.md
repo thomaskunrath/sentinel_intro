@@ -219,9 +219,77 @@ PopulationData
 | top 10 by State asc
 | where Population > 1000000
 ```
-As we can see if the image below, the returned search only lists the Stated that have over a million people living in there.
+As we can see if the image below, the returned search only lists the States that have over a million people living in there.
 
 ![image](https://github.com/user-attachments/assets/4cebe809-e01a-4f3d-b02c-88ab7467980c)
+
+Of course, as noted, this example is not about Hunting threats, it is just a overview on how KQL works, and can be used to Threat Hunting. 
+
+********************************************************************************************************************
+
+Now I will touch bases with Connecting MS Services, which in a nutshell is how we are going to ingest data into Sentinel via Data Connectors.
+That can be done via the menu Content Management > Content Hub.
+
+![image](https://github.com/user-attachments/assets/f8dcf80f-458e-42f5-a220-91496c423075)
+
+In this example I will demonstrate how to install MS Defender for Endpoint.
+As the library of connectors is quite large, and we know what we want to install, and provider, let's narrow down the search.
+First, hit "Provider" uncheck all and type Microsoft, tick it. That will limit out search around MS only products.
+Then on the Seach Box input "Defender". 
+
+![image](https://github.com/user-attachments/assets/4b0cd5f9-720d-466a-b5ad-679ee81eb39e)
+
+Click on the Connector we spoke about, a button will show up allowing to install it. Also take some time to read what is in the Description pane, it will tell you what you are bringing in by installing a certain Connector.
+
+![image](https://github.com/user-attachments/assets/7cde9872-ae52-4827-abcc-137674e7fca1)
+
+Once I hit Install (bottom right corner of the picture above), then it's done, and installed in a matter of seconds.
+
+![image](https://github.com/user-attachments/assets/95cf0c1f-276f-4c12-87fa-87f594a40ccf)
+
+Now that MS Defender for EndPoint is installed we can go over to Configuration > Data Connectors and it will be there. I won't go in it's configuration because due to my account limitations (I think) I am not able to further set it up.
+
+![image](https://github.com/user-attachments/assets/b607803d-84be-497c-b6df-a9f03fe7b9bb)
+
+But let's try another Data Connector, one that provides a Workbook to be able to take a look at it. In this case let's install Sentinel SOAR (Security Orchestration, Automation, and Response). Similarly as above let's take the same steps to try to find it amongst all those connectors. 
+
+![image](https://github.com/user-attachments/assets/d45eade4-a11b-4a9c-a1d7-bd18d20e2259)
+
+Once installed, click on Manage (bottom right of your screen). Let's install the "PostMessageSlack-OnAlert" and take a look at the Workbook. Why? Well, this is a home lab. I'm experimenting. 
+What does the "PostMessageSlack-OnAlert" do? It will post a message in a Slack channel when an alert is created in MS Sentinel. 
+
+![image](https://github.com/user-attachments/assets/7a600ce9-32c5-4938-b7f1-1564fc81de4b)
+
+Once you hit the Configuration button you will be taken to this screen:
+
+![image](https://github.com/user-attachments/assets/dd9b6a72-eff3-41b2-a47e-442750b06d01)
+
+Then hit Create Playbook. You will be prompted to setup the Basics, Connections, then you will be able to Review it and then finally create it. 
+
+![image](https://github.com/user-attachments/assets/491d17d3-23dc-46bf-8834-1d8a351ffbc1)
+
+Connections: - As expected, Sentinel and Slack.
+
+![image](https://github.com/user-attachments/assets/a4bdb707-d1f1-4cf7-b4ee-87f805ea9ac7)
+
+Then hit Create Playbook.
+
+![image](https://github.com/user-attachments/assets/e4cb2920-0234-4039-b982-72b56b2c1cf2)
+
+You will get this message while it is being deployed:
+
+![image](https://github.com/user-attachments/assets/3effea65-57e4-40d4-a1f9-51e6da408238)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
