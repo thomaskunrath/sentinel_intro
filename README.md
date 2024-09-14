@@ -280,7 +280,10 @@ You will get this message while it is being deployed:
 
 ![image](https://github.com/user-attachments/assets/3effea65-57e4-40d4-a1f9-51e6da408238)
 
+********************************************************************************************************************
 
+This is a ongoin study Lab. As I progress it will be updated.
+Thank you for your time for glancing over it.
 
 
 
