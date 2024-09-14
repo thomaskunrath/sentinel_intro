@@ -4,6 +4,7 @@ Here I will try to demonstrate:
 * What you should know.
 * How to get Started: Lab setup
 * Onboarding to Sentinel - bare with me, I am not a expert!
+   * A quick overview of it's Menus and Sub-Menus
 * KQL quick start
 * Connecting MS Services
 * Connecting External Services
@@ -170,6 +171,57 @@ And finally, Configuration:
 * Settings - A section for configuring various system settings, including user permissions, notification preferences, and integration options, to tailor Microsoft Sentinel to your organization's needs.
 
 ![image](https://github.com/user-attachments/assets/cf90a6d7-1578-42a7-bd67-ceadcbb18594)
+
+And here I finish with the Onboarding, covering:
+* What you should know.
+* How to get Started: Lab setup
+* Menu and Sub-Menu explanation
+********************************************************************************************************************
+In this next section I will talk about KQL, Kusto Query Language. KQL is the language Azure Log Analytics and MS Sentinel uses. It is used proactively in its Hunting Queries as well as out-of-box Rules which a built-in within Sentinel instance that we just depolyed. More can be explored at dataexplorer.azure.com.
+
+By accessing dataexplorer.azure.com we can find samples data sets to work with. In this case I will pick PopulationData table. To get in there, on the left-hand side hit help > Samples > Storm_Events > PopulationData. By inputting "PopulationData" into the box and hitting "Run" it will return all the records on the table which is 52 records.
+
+![image](https://github.com/user-attachments/assets/ff1395b0-8a58-4b4f-b192-f15f2b0d159a)
+
+If I, for example use the "Pipe Operator" ```( | )``` and add it to my previous string (which was PopulationData) along for example, ```count``` it would summarise for me the amount or occurencies. That's usefull when looking at very long tables.
+So then, in this case we go from ```PopulationData``` to ```PopulationData | count```, then hit "Run".
+
+![image](https://github.com/user-attachments/assets/f95147a5-e5bb-462c-8c16-ef59b59d6bc5)
+
+I can also filter events by metrics that are relevant to it. Let's say I want to display the top 10 events in the States of that region. 
+So my string would be:
+```
+PopulationData
+| top 10 by State
+```
+I will then return to me:
+
+![image](https://github.com/user-attachments/assets/912d666a-4f0e-4ca2-847c-610f3b73fcd5)
+
+As we can notice, its got a "auto-fill" function:
+
+![image](https://github.com/user-attachments/assets/ee04400c-9309-4edb-8d5d-e640827c7d5b)
+
+Let's add that to see what is going to happen.
+So our code would be then:
+```
+PopulationData
+| top 10 by State asc
+```
+And that will list out 10 States is ascending order by name as per image below.
+
+![image](https://github.com/user-attachments/assets/22e3e1f4-19c6-4419-8606-38fb90c23b1b)
+
+We can also filter a little further where. In this example let's try to show the top 10 stated which have more than a million people.
+So our code should be:
+```
+PopulationData
+| top 10 by State asc
+| where Population > 1000000
+```
+As we can see if the image below, the returned search only lists the Stated that have over a million people living in there.
+
+![image](https://github.com/user-attachments/assets/4cebe809-e01a-4f3d-b02c-88ab7467980c)
 
 
 
