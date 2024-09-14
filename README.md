@@ -65,5 +65,28 @@ And that's how it looks like:
 
 ![image](https://github.com/user-attachments/assets/520ad62b-c404-40c6-891c-8f8da433ebe1)
 
+With VirtualBox installed, and the WinDev2407Eval.VirtualBox.zip UNZIPPED, just double click on the extracted file, "WinDev2407Eval.ova".
+It will summon VirtualBox automatically and will install a Windows VM within VB but it won't launch it by itself. It will look like this:
+
+![image](https://github.com/user-attachments/assets/a11f3716-ebd9-4083-adfe-0f604e4ebe7f)
+
+Just hit Finish and that's it.
+
+Don't mind the Kali-Linux machine in the list.
+Select WinDev2407Eval and hit Start. VirtualBox will pop-up another screen where it will load a Windows 11 instance. Just wait for it to finish.
+
+![image](https://github.com/user-attachments/assets/dbb804a8-5d04-410f-ae67-630d5ff20eac)
+
+Once done you will end up with Windows 11 loaded up like below. Resize it to your liking.
+
+![image](https://github.com/user-attachments/assets/4177407b-9871-4ea3-8117-baca76211af2)
+
+
+
+
+
+
+
+
 
 
