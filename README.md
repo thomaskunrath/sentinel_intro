@@ -81,10 +81,95 @@ Once done you will end up with Windows 11 loaded up like below. Resize it to you
 
 ![image](https://github.com/user-attachments/assets/4177407b-9871-4ea3-8117-baca76211af2)
 
+Now comes the fun. MS allows you to have a go at Azure, and Sentinel as trial and won't charge anything for it. I did not need to input any sort of CC detail.
+Once you gone through the process of registering for a Trial Account, log-in to the Azure Portal and you will be presented with this screen.
+
+![image](https://github.com/user-attachments/assets/a0b43f90-e86e-470b-8f4a-dc970af98a42)
+
+
+It is a good idea to go through the Tour. If you are impatient, skip the tour, hit the Search bar and look for "Sentinel", click on it. You are going to be asked to start a free trial. Go through the process. 
+
+You will end up like in the image below. Hit "Create MS Sentinel".
+
+![image](https://github.com/user-attachments/assets/669c2c41-352e-4808-b941-50c34f681821)
+
+Then create a Workspace. Create a Resouce Group. In Instance details, give a Name for your Workspace, and select the Region, which should match with the Region your infrastructure is located.
+
+![image](https://github.com/user-attachments/assets/0a686509-f51f-4906-b8f9-8fd38fb02933)
+
+Hit Review + Create.
+
+![image](https://github.com/user-attachments/assets/6262bfff-87ba-42d7-b47a-fcdd3059c307)
+
+
+There are few reasons why creating a new login analytics instance. 
+A new instance can allow you to tighly control who has access to what, and here we are talking about sensitive data in the Sentinel instance.
+Also, Service Isolation, this is more towards a Technical Consideration. And the last reason is, well, a fresh start. 
+
+So here I have my Login Analytics Instance is created:
+
+![image](https://github.com/user-attachments/assets/bbf8df8b-0af4-483a-a86a-8eed0948cefc)
+
+Hitting the "Add" button on the end of the page (not shown) would tell me that Sentinel was added with success. 
+
+Then now I have access to its options:
+* General
+   * Overview
+   * Logs
+   * News & Guides
+   * Search
+* Threat Management
+   * Incidents
+   * Workbooks
+   * Hunting
+   * Notebooks
+   * Entity Behavior
+   * Threat Intelligence
+   * MITRE ATT&CK
+
+ And many menus that are used to configure Sentinel.
+
+![image](https://github.com/user-attachments/assets/51888baa-97b7-450b-825b-490d1da580bf)
+
+Under General:
+* Overview - A summary dashboard that presents key metrics, alerts, and insights about your security environment, helping you quickly assess the current security posture and identify areas that may require attention.
+* Logs - A centralized repository of log data from various sources, enabling you to search, analyze, and investigate security events and activities to enhance threat detection and response capabilities.
+* News & Guides - A section that provides the latest updates, features, and helpful guides for using Microsoft Sentinel effectively, ensuring you stay informed about new capabilities and best practices.
+* Search - A powerful search functionality that allows you to query and filter through logs and data to find specific events or patterns, facilitating in-depth investigations and analysis of security incidents.
 
 
 
+![image](https://github.com/user-attachments/assets/5429559d-af3f-48e8-9cca-1d1cf6e02beb)
 
+
+Under Threat Management we've got Pro-Active and Rule Based Hunting functionality:
+* Incidents - A centralized view of security incidents, allowing you to investigate and respond to threats effectively by aggregating related alerts and providing context.
+* Workbooks - Customizable dashboards that visualize data and insights from your security environment, enabling you to monitor and analyze security metrics and trends.
+* Hunting - A proactive approach to identifying potential threats by searching for anomalies and suspicious activities across your data, using queries and analytics.
+* Notebooks - Interactive documents that combine code, visualizations, and narrative text, allowing security analysts to document investigations, share findings, and collaborate on threat analysis.
+* Entity behaviour - Analysis of user and entity behavior to detect deviations from normal patterns, helping to identify potential insider threats or compromised accounts.
+* Threat Intelligence - Integration of external threat data to enhance your security posture, providing context and insights into emerging threats and vulnerabilities.
+* MITRE ATT&CK - A framework that categorizes and describes adversary tactics and techniques, helping security teams understand and respond to threats based on real-world attack patterns.
+
+![image](https://github.com/user-attachments/assets/c6221141-3031-4b16-a614-46f8ffe1514b)
+
+Then we have Content Management:
+* Content Hub -  A centralized location for accessing and managing various security content, such as analytics rules, workbooks, and playbooks, allowing you to enhance your security operations with pre-built and customizable resources.
+* Repositories -  Provides access to different repositories of security content, including templates and shared resources, enabling you to easily find and implement relevant security solutions tailored to your environment.
+* Community - A platform for collaboration and knowledge sharing among users, where you can access community-contributed content, best practices, and insights, fostering a collaborative approach to improving security measures and responses.
+
+![image](https://github.com/user-attachments/assets/d96e0a15-bcf8-4358-bb78-6a1d6876ad04)
+  
+And finally, Configuration:
+* Workspace Manager - A tool for managing and configuring your Sentinel workspace, including settings related to data retention, user access, and resource allocation.
+* Data Connectors - A feature that allows you to integrate various data sources into Microsoft Sentinel, enabling the collection and analysis of security data from multiple platforms.
+* Analytics - A section for configuring and managing analytics rules that detect threats and generate alerts based on predefined criteria and patterns.
+* Summary Rules - A feature that allows you to create and manage summary rules to aggregate alerts and incidents, providing a streamlined view of security events.
+* Watchlist -  A customizable list of entities or indicators that you want to monitor closely, helping to prioritize investigations and responses to specific threats.
+* Automation - A tool for setting up automated responses and workflows to security alerts, enhancing efficiency and reducing response times.
+* Settings - A section for configuring various system settings, including user permissions, notification preferences, and integration options, to tailor Microsoft Sentinel to your organization's needs.
+
+![image](https://github.com/user-attachments/assets/cf90a6d7-1578-42a7-bd67-ceadcbb18594)
 
 
 
