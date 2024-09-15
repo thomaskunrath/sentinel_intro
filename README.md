@@ -2,6 +2,7 @@
 
 ```Disclaimer: This Microsoft Sentinel instance was created for educational purposes. The information contained within may be incomplete or inaccurate. It is intended solely for study and learning, and should not be relied upon for professional or operational use.```
 
+To create a free Azure accouunt go [here](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account?icid=azurefreeaccount).
 
 Microsoft Sentinel is an advanced, cloud-based security event and information management (SEIM) system that delivers real-time analysis of security alerts for both your cloud and on-premises resources.
 Here I will try to demonstrate:
