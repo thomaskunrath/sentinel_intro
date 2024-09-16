@@ -5,6 +5,7 @@
 To create a free Azure account go [here](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account?icid=azurefreeaccount).
 
 Microsoft Sentinel is an advanced, cloud-based security event and information management (SEIM) system that delivers real-time analysis of security alerts for both your cloud and on-premises resources. It's basically SIEM + SOAR + SaaS.
+
 Here I will try to demonstrate:
 * What you should know.
 * How to get Started: Lab setup
